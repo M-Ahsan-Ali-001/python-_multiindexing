@@ -23,6 +23,6 @@ for x in range(len(df_cols)-1):
 
 columns = pd.MultiIndex.from_tuples(test)
 df.columns = columns
-
+ set_proposed = {x[0] for x in df.columns if re.search('proposed' , x[0] ,re.IGNORECASE)} 
 
 pdb.set_trace()
